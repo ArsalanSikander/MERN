@@ -13,6 +13,7 @@ app.use(cors());
 
 app.get("/", (req, res) => {
   //   console.log(req);
+  console.log("MERN App started!");
   return res.status(234).send("MERN APP START ");
 });
 

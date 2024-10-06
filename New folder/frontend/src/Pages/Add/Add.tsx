@@ -40,7 +40,7 @@ const Add = () => {
 
 
         setLoading(true)
-        axios.post('http://localhost:5555/books', data).then(() => {
+        axios.post('http://65.2.57.177:5555/books', data).then(() => {
             setLoading(false)
             enqueueSnackbar("Book Created Successfully", { variant: "success" })
             Navigate("/")
