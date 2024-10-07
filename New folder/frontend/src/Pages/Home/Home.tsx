@@ -23,7 +23,7 @@ const Home = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get('http://localhost:5555/Books/').then((res) => {
+        axios.get('http://65.2.57.177:5555/Books/').then((res) => {
             SetBooks(res.data.data)
             // console.log(res.data.data)
             setLoading(false)
