@@ -23,7 +23,7 @@ const Home = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`http://${import.meta.env.current_IP}:5555/Books/`).then((res) => {
+        axios.get(`http://${import.meta.env.VITE_CURRENT_IP}:5555/Books/`).then((res) => {
             SetBooks(res.data.data)
             // console.log(res.data.data)
             setLoading(false)

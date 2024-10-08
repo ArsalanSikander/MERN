@@ -28,7 +28,7 @@ const Edit = () => {
     useEffect(() => {
 
         setLoading(true)
-        axios.get(`http://localhost:5555/books/${id}`).then((res) => {
+        axios.get(`http://${import.meta.env.VITE_CURRENT_IP}:5555/books/${id}`).then((res) => {
             setBookTitle(res.data.BookTitle)
             setBookAuthor(res.data.BookAuthor)
             setBookIntro(res.data.BookIntro)

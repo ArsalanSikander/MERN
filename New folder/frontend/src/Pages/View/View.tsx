@@ -27,7 +27,7 @@ const View = () => {
 
     useEffect(() => {
         SetLoading(true)
-        axios.get(`http://localhost:5555/books/${id}`).then((res) => {
+        axios.get(`http://${import.meta.env.VITE_CURRENT_IP}:5555/books/${id}`).then((res) => {
             setBook(res.data)
             // console.log(res.data)
             SetLoading(false)

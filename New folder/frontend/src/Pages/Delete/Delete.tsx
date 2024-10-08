@@ -18,7 +18,7 @@ const Delete = () => {
     // Logic To Delete The Book
     const DeleteBook = () => {
         setLoading(true)
-        axios.delete(`http://localhost:5555/Books/${id}`).then(() => {
+        axios.delete(`http://${import.meta.env.VITE_CURRENT_IP}:5555/Books/${id}`).then(() => {
             setLoading(false)
             enqueueSnackbar(`Book Deleted Successfully Id is ${id}`, { variant: 'info' })
             Navigate("/")

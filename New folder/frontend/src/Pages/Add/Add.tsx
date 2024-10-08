@@ -40,7 +40,7 @@ const Add = () => {
 
 
         setLoading(true)
-        axios.post('http://localhost:5555/books', data).then(() => {
+        axios.post(`http://${import.meta.env.VITE_CURRENT_IP}:5555/books`, data).then(() => {
             setLoading(false)
             enqueueSnackbar("Book Created Successfully", { variant: "success" })
             Navigate("/")
